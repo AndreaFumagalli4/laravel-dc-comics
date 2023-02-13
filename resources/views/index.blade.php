@@ -9,7 +9,7 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            {{-- <th scope="col">id</th> --}}
+                            <th scope="col">id</th>
                             <th scope="col">title</th>
                             <th scope="col">price</th>
                             <th scope="col">series</th>
@@ -21,7 +21,7 @@
         
                         @foreach ($comics as $comic)
                             <tr>
-                                {{-- <th scope="row">{{ $comic['id'] }}</th> --}}
+                                <th scope="row">{{ $comic->id }}</th>
                                 <td>{{ $comic->title }}</td>
                                 <td>{{ $comic->price }}</td>
                                 <td>{{ $comic->series }}</td>

@@ -5,21 +5,29 @@
 @section('main-content')
     <div class="container">
         <div class="row">
-            <div class="col-12 p-5">
-                <div class="card">
+            <div class="col-12">
+                <div class="card text-center p-3">
                     <div class="card-title">
                         <h2>
-
+                            {{ $comic->title }}
                         </h2>
                     </div>
                     <div class="card-img">
-
-                    </div>
-                    <div class="card-subtitle">
-
+                        <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}" class="img-fluid">
                     </div>
                     <div class="card-body">
-
+                        <p>
+                            {{ $comic->description }}
+                        </p>
+                        <p>
+                        <p>
+                            Series: {{ $comic->series }}
+                        </p>
+                            Type: {{ $comic->type }}
+                        </p>
+                        <p>
+                            Price: {{ $comic->price }} &dollar;
+                        </p>
                     </div>
                 </div>
             </div>
