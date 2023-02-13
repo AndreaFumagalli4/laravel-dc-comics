@@ -13,7 +13,8 @@ class ComicController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $comics = config('comics');
+        return view('index', compact('comics'));
     }
 
     /**
