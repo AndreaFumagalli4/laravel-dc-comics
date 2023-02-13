@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'show')
+@section('title', "Comic: $comic->title")
 
 @section('main-content')
     <div class="container">
@@ -19,7 +19,7 @@
 
                     </div>
                     <div class="card-body">
-                        
+
                     </div>
                 </div>
             </div>

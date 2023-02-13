@@ -22,12 +22,12 @@
                         @foreach ($comics as $comic)
                             <tr>
                                 {{-- <th scope="row">{{ $comic['id'] }}</th> --}}
-                                <td>{{ $comic['title'] }}</td>
-                                <td>{{ $comic['price'] }}</td>
-                                <td>{{ $comic['series'] }}</td>
-                                <td>{{ $comic['type'] }}</td>
+                                <td>{{ $comic->title }}</td>
+                                <td>{{ $comic->price }}</td>
+                                <td>{{ $comic->series }}</td>
+                                <td>{{ $comic->type }}</td>
                                 <td>
-                                    <a href="{{ route('comics.show') }}" class="btn btn-primary">
+                                    <a href="{{route('comics.show', $comic->id)}}" class="btn btn-sm btn-primary">
                                         Show
                                     </a>
                                 </td>
