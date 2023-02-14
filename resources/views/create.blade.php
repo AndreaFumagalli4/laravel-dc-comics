@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-
+                
                 <form action="{{route('comics.store')}}" method="POST">
                     @csrf
                     
@@ -42,12 +42,10 @@
                         Submit
                     </button>
                 </form>
-
+                
             </div>
         </div>
     </div>
-
-    
 
 @endsection
 

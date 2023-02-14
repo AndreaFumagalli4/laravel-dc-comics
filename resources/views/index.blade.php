@@ -22,8 +22,8 @@
                             <th scope="col">Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
-        
+                    <tbody> 
+                        
                         @foreach ($comics as $comic)
                             <tr>
                                 <th scope="row">{{ $comic->id }}</th>

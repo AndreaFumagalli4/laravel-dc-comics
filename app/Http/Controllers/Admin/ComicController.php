@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Comic;
 use Illuminate\Http\Request;
 
 class ComicController extends Controller
 {
     /**
-     * Display all comics into db.
+     * Display all comics from db.
      *
      * @return \Illuminate\Http\Response
      */
@@ -60,7 +61,6 @@ class ComicController extends Controller
     {
         return view('show', compact('comic'));
     }
-
     /**
      * Show the form for editing the specified resource.
      *
