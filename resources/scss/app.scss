@@ -1,1 +1,51 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+header#guest-header{
+    text-transform: uppercase;
+    color: #797979;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+main#guest{
+    background-color: #1c1c1c;
+    color:white;
+}
+
+h1#marvel{
+    font-size: 7.5rem;
+}
+
+div.dc-logo{
+    height: 50px;
+
+    img{
+        height: 100%;
+    }
+}
+
+div.col-2{
+    border: none;
+    overflow: hidden;
+    
+    p{
+        text-align: start;
+        text-transform: uppercase;
+        font-size: .8rem;
+        padding-top: 1rem;
+    }
+}
+
+div.col-3 h5{
+    padding: 1rem 0 .5rem;
+    
+}
+
+div.jumbo{
+    height: 300px;
+    overflow: hidden;
+
+    img{
+        width: 100%;
+    }
+}

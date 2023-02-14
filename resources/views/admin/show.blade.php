@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('admin.layouts.backoffice')
 
 @section('title', "Comic: $comic->title")
 
