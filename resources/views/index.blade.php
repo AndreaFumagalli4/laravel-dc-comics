@@ -5,16 +5,21 @@
 @section('main-content')
     <div class="container">
         <div class="row">
-            <div class="col-12 p-5">
+            <div class="col-12 p-3">
+                <div class="m-2 text-end">
+                    <a href="{{ route('comics.create') }}"class="btn btn-info">
+                        Create a new Comic
+                    </a>
+                </div>
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">id</th>
-                            <th scope="col">title</th>
-                            <th scope="col">price</th>
-                            <th scope="col">series</th>
-                            <th scope="col">type</th>
-                            <th scope="col">actions</th>
+                            <th scope="col">Id</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Series</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
