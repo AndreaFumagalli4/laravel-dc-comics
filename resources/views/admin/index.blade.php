@@ -40,10 +40,9 @@
                                         Edit
                                     </a>
 
-                                    <form class="d-inline-block" action="{{route('comics.destroy', $comic->id)}}" method="POST">
+                                    <form class="d-inline-block form-deleter" action="{{route('comics.destroy', $comic->id)}}" method="POST" data-element-name="{{$comic->title}}">
                                         @csrf
                                         @method('DELETE')
-
                                         <button class="btn btn-sm btn-danger" type="submit">
                                             Delete
                                         </button>
@@ -58,4 +57,8 @@
         </div>
     </div>
 
+@endsection
+
+@section('scripts')
+@vite('resources/js/deleteHandler.js')
 @endsection
