@@ -39,9 +39,9 @@
                                     <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-sm btn-warning">
                                         Edit
                                     </a>
-                                    {{-- <a href="{{route('comics.show', $comic->id)}}" class="btn btn-sm btn-primary">
-                                        Delite
-                                    </a> --}}
+                                    <a href="{{route('comics.destroy', $comic->id)}}" class="btn btn-sm btn-danger">
+                                        Delete
+                                    </a>
                                 </td>
                             </tr>
                         @endforeach
