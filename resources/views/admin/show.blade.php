@@ -5,6 +5,7 @@
 @section('main-content')
     <div class="container">
         <div class="row">
+            @dump(Route::currentRouteName())
             <div class="col-12">
                 <div class="card text-center p-3">
                     <div class="card-title">

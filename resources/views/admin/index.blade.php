@@ -5,6 +5,7 @@
 @section('main-content')
     <div class="container">
         <div class="row">
+            @dump(Route::currentRouteName())
             <div class="col-12 p-3">
                 <div class="m-2 text-end">
                     <a href="{{ route('comics.create') }}"class="btn btn-info">
@@ -35,7 +36,7 @@
                                     <a href="{{route('comics.show', $comic->id)}}" class="btn btn-sm btn-primary">
                                         Show
                                     </a>
-                                    <a href="{{route('comic.edit', $comic->id)}}" class="btn btn-sm btn-warning">
+                                    <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-sm btn-warning">
                                         Edit
                                     </a>
                                     {{-- <a href="{{route('comics.show', $comic->id)}}" class="btn btn-sm btn-primary">
