@@ -19,9 +19,15 @@
 
 <body>
     <header>
-        <h1>
-            DC Comics
-        </h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>
+                        DC Comics
+                    </h1>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main class="p-3">

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ComicController as ComicController;
+use App\Http\Controllers\Admin\HomeController as HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +15,14 @@ use App\Http\Controllers\Admin\ComicController as ComicController;
 |
 */
 
-Route::get('/', [ComicController::class, 'index'])->name('comics.index');
-Route::get('/create', [ComicController::class, 'create'])->name('comics.create');
-Route::get('/{comic}', [ComicController::class, 'show'])->name('comics.show');
-Route::post('/', [ComicController::class, 'store'])->name ('comics.store');
-Route::get('/{comic}/edit', [ComicController::class, 'edit'])->name('comics.edit');
-Route::put('/{comic}', [ComicController::class, 'update'])->name('comics.update');
-Route::delete('/{comic}', [ComicController::class, 'destroy'])->name('comics.destroy');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::prefix('comics')->name('comics.')->group(function(){
+    Route::get('/', [ComicController::class, 'index'])->name('index');
+    Route::get('/create', [ComicController::class, 'create'])->name('create');
+    Route::get('/{comic}', [ComicController::class, 'show'])->name('show');
+    Route::post('/', [ComicController::class, 'store'])->name ('store');
+    Route::get('/{comic}/edit', [ComicController::class, 'edit'])->name('edit');
+    Route::put('/{comic}', [ComicController::class, 'update'])->name('update');
+    Route::delete('/{comic}', [ComicController::class, 'destroy'])->name('destroy');
+});
