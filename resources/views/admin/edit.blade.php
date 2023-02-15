@@ -8,7 +8,7 @@
             @dump(Route::currentRouteName())
             <div class="col-12">
                 
-                <form action="{{route('comics.edit', $comic->id)}}" method="POST">
+                <form action="{{route('comics.update', $comic->id)}}" method="POST">
                     @csrf
                     @method('PUT')
                     

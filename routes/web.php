@@ -18,6 +18,6 @@ Route::get('/', [ComicController::class, 'index'])->name('comics.index');
 Route::get('/create', [ComicController::class, 'create'])->name('comics.create');
 Route::get('/{comic}', [ComicController::class, 'show'])->name('comics.show');
 Route::post('/', [ComicController::class, 'store'])->name ('comics.store');
-Route::put('/{comic}/edit', [ComicController::class, 'edit'])->name('comics.edit');
-
+Route::get('/{comic}/edit', [ComicController::class, 'edit'])->name('comics.edit');
+Route::put('/{comic}', [ComicController::class, 'update'])->name('comics.update');
 
