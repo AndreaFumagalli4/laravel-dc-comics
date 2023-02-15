@@ -17,5 +17,6 @@ use App\Http\Controllers\Admin\ComicController as ComicController;
 Route::get('/', [ComicController::class, 'index'])->name('comics.index');
 Route::get('/create', [ComicController::class, 'create'])->name('comics.create');
 Route::get('/{comic}', [ComicController::class, 'show'])->name('comics.show');
-Route::post ('/', [ComicController::class, 'store'])->name ('comics.store');
+Route::post('/', [ComicController::class, 'store'])->name ('comics.store');
+Route::get('/{comic}/edit', [ComicController::class, 'edit'])->name('comic.edit');
 

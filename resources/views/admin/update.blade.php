@@ -1,6 +1,6 @@
 @extends('admin.layouts.backoffice')
 
-@section('title', 'Create')
+@section('title', "Update $comic->title")
 
 @section('main-content')
     <div class="container">
@@ -9,6 +9,7 @@
                 
                 <form action="{{route('comics.store')}}" method="POST">
                     @csrf
+                    @method('PUT')
                     
                     <div class="mb-3">
                         <label class="form-label" for="title">

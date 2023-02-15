@@ -35,6 +35,12 @@
                                     <a href="{{route('comics.show', $comic->id)}}" class="btn btn-sm btn-primary">
                                         Show
                                     </a>
+                                    <a href="{{route('comic.edit', $comic->id)}}" class="btn btn-sm btn-warning">
+                                        Edit
+                                    </a>
+                                    {{-- <a href="{{route('comics.show', $comic->id)}}" class="btn btn-sm btn-primary">
+                                        Delite
+                                    </a> --}}
                                 </td>
                             </tr>
                         @endforeach
