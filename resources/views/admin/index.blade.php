@@ -39,9 +39,15 @@
                                     <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-sm btn-warning">
                                         Edit
                                     </a>
-                                    <a href="{{route('comics.destroy', $comic->id)}}" class="btn btn-sm btn-danger">
-                                        Delete
-                                    </a>
+
+                                    <form class="d-inline-block" action="{{route('comics.destroy', $comic->id)}}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+
+                                        <button class="btn btn-sm btn-danger" type="submit">
+                                            Delete
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
