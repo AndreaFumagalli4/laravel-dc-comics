@@ -50,13 +50,13 @@ class ComicController extends Controller
 
         $data = $request->all();
 
-        $validated = $request->validate([
+        $request->validate([
             'title' => 'required|min:2|max:100',
             'description' => 'required|',
             'thumb' => 'required|active_url',
             'price' => 'required|decimal:2',
             'series' => 'required|min:2|max:50',
-            'sale_date' => 'required|date',
+            'sale_date' => 'required|date|before:today',
             'type' => 'required|min:2|max:30',
             ]);
 
